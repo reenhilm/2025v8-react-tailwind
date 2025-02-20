@@ -1,4 +1,6 @@
+"use server"
 import { fetchReceiptsByCategory } from "@/actions";
+import ReceiptToast from "@/components/ReceiptToast";
 import Link from "next/link";
 //todo make interface for searchParams
 export default async function Receipts(
@@ -15,7 +17,8 @@ export default async function Receipts(
     return (
         <>
             <section>
-                Search for receipts                
+                Search for receipts
+            <ReceiptToast />
             </section>
             <section>
                 Receipt list for {categoryname}
