@@ -16,10 +16,10 @@ export default async function Receipts(
 
     return (
         <>
-            <section>
-                Search for receipts
+            <h2 className="text-xl">
+                Search for receipts                
+            </h2>
             <ReceiptToast />
-            </section>
             <section>
                 Receipt list for {categoryname}
 

@@ -27,17 +27,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>        
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <div className="grid grid-cols-(--layout-grid-cols)">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >
-          <LayoutHeader />
-          {children}
+          >
+            <header className="col-start-2 col-span-12 grid grid-cols-subgrid">
+              <LayoutHeader  />
+            </header>
+            <main className="col-start-2 col-span-12 grid grid-cols-subgrid">
+              {children}
+            </main>
           <Toaster />
-        </ThemeProvider>        
+          </ThemeProvider>        
+        </div>
       </body>
     </html>
   );
