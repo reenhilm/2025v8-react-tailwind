@@ -1,6 +1,6 @@
 "use server"
 import { fetchReceiptsByCategory } from "@/actions";
-import ReceiptToast from "@/components/ReceiptToast";
+import ReceiptToast from "@/components/receipt-toast";
 import Link from "next/link";
 //todo make interface for searchParams
 export default async function Receipts(
